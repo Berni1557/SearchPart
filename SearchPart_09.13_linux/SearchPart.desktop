@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=SearchPart
+Type=Application
+Comment=SearchPart
+Exec=SearchPart_start.sh
+Icon=label.png
+GenericName=SearchPart
+Name[de_DE]=SearchPart
