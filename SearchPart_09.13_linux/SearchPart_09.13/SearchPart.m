@@ -14,8 +14,15 @@ function SearchPart()
     filepath=mfilename('fullpath');
     startPath = regexpi(filepath,'SearchPart');
     filepath=filepath(1:startPath(end)-2);
+    
     upath=userpath;
-    currentpath=upath(1:end-1);
+    startPath = regexpi(upath,':');
+    if(~isempty(startPath))
+        currentpath=upath(1:startPath(1)-1);
+    else
+        currentpath=upath;
+    end
+    
     if(strcmp(currentpath,filepath))
         % Add path of strategies and SearchPart-programm
         addpath(genpath([currentpath,'/strategies']));
@@ -24,7 +31,6 @@ function SearchPart()
         % open welcome GUI
         GUIwelcome();    
     else
-        load('SearchPartVersion');
         disp(['False directory!']);
     end
 end
