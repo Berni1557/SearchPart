@@ -35,17 +35,16 @@ database='main';
                 file=strWeb(eR(1)+1:eR(1)+sAnd(1)-2);
 
                 fullpath1=fullpath(2:end-1);
-
-                pt=userpath;
-                pt=[pt(1:end-1),'/SearchPart Java '];
+                
+                filepath=mfilename('fullpath');
+                startPath = regexpi(filepath,'datasheetarchive');
+                filepath=filepath(1:startPath(end)-2);
+                pt=[filepath,' Java '];
+                
+                %pt=userpath;
+                %pt=[pt(1:end-1),'/SearchPart Java '];
                 js=['java -cp ', pt, fullpath1,' ', datasheet,' ', dir,' ',file,' ',database];      % bilt java command for terminal
                 system(js);                                     % download dataseet with java programm
-                
-%                 upath=userpath();
-%                 currentpath=upath(1:end-1);
-%                 javaaddpath(currentpath);
-%                 o=Java;
-%                 javaMethod('main',o, {fullpath1, datasheet, dir, file, database});
                 
                 stat=true;
             catch err
