@@ -21,4 +21,8 @@ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
 See the GNU General Public License for more details.
 You should have received a copy of the GNU General Public License alongwith this program; if not, see <http://www.gnu.org/licenses/>.
 
+<<<<<<< HEAD
 ---------------------------------------------------------------------------------------------------------------------------
+=======
+--------------------------------------------------------------------------------------------------------------------------
+>>>>>>> 13aad3dc19a0ab43b6a7791862ba76e773b72b96
